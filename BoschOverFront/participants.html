@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=arrow_forward_ios" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=arrow_forward_ios,delete,edit_square" />
+    <link rel="stylesheet" href="./css/space.css">
+    <title>Participants</title>
+</head>
+<body>
+    <div class="modal" tabindex="-1" id="modaldelete">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">Delete</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <h5>Are you sure you want to delete this user?</h5>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary">Delete</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    <div class="modal" tabindex="-1" id="modal">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">User</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="mb-3">
+                    <label class="form-label">Name</label>
+                    <input class="form-control" type="text" placeholder="User name...">
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Admin</label>
+                    <input class="form-control" type="text" placeholder="User status...">
+                </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary">Save</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    <nav class="navbar bg-body-tertiary">
+        <div class="container-fluid">
+            <a href="inicio.html">
+                <img src="./img/logo.png" alt="">
+            </a>
+            <a href="index.html">
+                <img class="logout" src="./img/sair.png" alt="">
+            </a>
+        </div>
+    </nav>
+    <main>
+        <div class="myspace">
+            <div class="spacemy">
+                <a href="space.html">
+                    <img src="./img/back.png" alt="" style="width: 32px;">
+                </a>
+                <h1 class="myspacetitle">Space Name</h1>
+            </div>
+            <button class="btn btn-outline-success p" type="submit">Add participant</button>
+        </div>
+        <form class="d-flex" role="search">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success" type="submit">Search</button>
+        </form>
+        <div class="questions">
+            <h1 style="font-size: 24px; margin-bottom: 1%;">Participants</h1>
+            
+            <div class="card" style="width: 100%;">
+                <div class="card-header question" onclick="toggleAnswer(this)">
+                    mari_marques <div><span class="material-symbols-outlined" data-bs-toggle="modal" data-bs-target="#modal">edit_square</span><span class="material-symbols-outlined" data-bs-toggle="modal" data-bs-target="#modaldelete">delete</span></div>
+                </div>
+            </div>
+            
+            <div class="card" style="width: 100%;">
+                <div class="card-header question" onclick="toggleAnswer(this)">
+                    matiaszoniga <div><span class="material-symbols-outlined" data-bs-toggle="modal" data-bs-target="#modal">edit_square</span><span class="material-symbols-outlined" data-bs-toggle="modal" data-bs-target="#modaldelete">delete</span></div>
+                </div>
+            </div>
+
+            <div class="card" style="width: 100%;">
+                <div class="card-header question" onclick="toggleAnswer(this)">
+                    xmarimarquesh <div><span class="material-symbols-outlined" data-bs-toggle="modal" data-bs-target="#modal">edit_square</span><span class="material-symbols-outlined">delete</span></div>
+                </div> 
+            </div>
+
+            <div class="card" style="width: 100%;">
+                <div class="card-header question" onclick="toggleAnswer(this)">
+                    helegendary <div><span class="material-symbols-outlined" data-bs-toggle="modal" data-bs-target="#modal">edit_square</span><span class="material-symbols-outlined">delete</span></div>
+                </div>
+            </div>
+        </div>
+        
+
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        function toggleAnswer(header) {
+        const ul = header.nextElementSibling; 
+        const arrow = header.querySelector('.arrow'); 
+
+        if (ul.style.display === 'none' || ul.style.display === '') {
+            ul.style.display = 'block';
+            arrow.classList.add('open');
+        } else {
+            ul.style.display = 'none';
+            arrow.classList.remove('open');
+        }
+    }
+
+    </script>
+</body>
+</html>

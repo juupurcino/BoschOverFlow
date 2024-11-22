@@ -1,0 +1,60 @@
+img {
+    width: 200px;
+}
+
+.d-flex{
+    width: 81%;
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    justify-content: flex-start;
+    width: 100%;
+    min-height: 100vh;
+    background-color: #282A35;
+    padding: 2%;
+}
+
+.q{
+    display: flex;
+    flex-direction: row;
+    margin-top: 2%;
+    justify-content: space-between;
+    width: 81%;
+    align-items: center;
+    color: white;
+}
+
+
+
+.logout{
+    width: 32px;
+    margin-right: 1%;
+}
+
+.btn{
+    background-color: #FF9100;
+    color: black;
+    border-width: 0;
+}
+
+.btn:hover{
+    background-color: #ff7b00;
+    color: black;
+}
+
+.cards{
+    flex-wrap: wrap;
+    flex-direction: row;
+    display: flex;
+    gap: 1.5%;
+    align-items: center;
+    justify-content: center; 
+    max-width: 81%;
+}
+
+.card{
+    margin-bottom: 2%;
+}
